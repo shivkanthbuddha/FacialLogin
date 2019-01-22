@@ -1,22 +1,37 @@
-<!DOCTYPE html>
-<html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>image_classification</title>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
 	<script src="https://unpkg.com/ml5@0.1.3/dist/ml5.min.js"></script>
 	<script src="sketch.js"></script>
 
-</head>
+<!------ Include the above in your HEAD tag ---------->
 
-<body>
-		
-</body>
-<input type="text" id="labelFormages" name="labelForImages" />
-</html>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <h1>Facial Login</h1>
+    </div>
+
+    <!-- Login Form -->
+    <form>
+			<input type="text" id="labelFormages" name="labelForImages" />
+      <!-- <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password"> -->
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <!-- <div id="formFooter">
+      <a class="underlineHover" href="#">Go to the Site</a>
+    </div> -->
+
+  </div>
+</div>
+
