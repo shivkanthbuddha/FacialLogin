@@ -41,7 +41,7 @@ function setup() {
   classifier = mobilenet.classification(video, videoReady);
   labelInput = select("#labelFormages");
 
-  happyButton = createButton('Add Image for Registration');
+  happyButton = createButton('Add an Image ');
   happyButton.mousePressed(function () {
     classifier.addImage( labelInput.value());
     //classifier.addImage('happy');
@@ -49,12 +49,12 @@ function setup() {
 
 
 
-  trainButton = createButton('Proceed to Register');
+  trainButton = createButton('Register the face ');
   trainButton.mousePressed(function () {
     classifier.train(whileTraining);
   });
 
-  saveButton = createButton('save');
+  saveButton = createButton('Download model\'s delta');
   saveButton.mousePressed(function () {
     classifier.save();
   });
