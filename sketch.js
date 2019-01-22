@@ -5,7 +5,7 @@ let label = 'loading model';
 let ukeButton;
 let whistleButton;
 let trainButton;
-let labelInput;
+let personName;
 
 
 function modelReady() {
@@ -24,17 +24,18 @@ function videoReady() {
 }
 
 function setup() {
-  createCanvas(320, 270);
+  var canvas = createCanvas(400, 400);
+  canvas.parent('sketch-holder');
   video = createCapture(VIDEO);
   video.hide();
   background(0);
   mobilenet = ml5.featureExtractor('MobileNet', modelReady);
   classifier = mobilenet.classification(video, videoReady);
-  labelInput = select("#personName");
+  personName = select("#personName");
 
   addAnImage = select("#addAnImage"); 
   addAnImage.mousePressed(function () {
-    classifier.addImage( labelInput.value());
+    classifier.addImage( personName.value());
   });
 
   trainButton = select("#register");
@@ -50,7 +51,7 @@ function setup() {
 
 function draw() {
   background(0);
-  image(video, 0, 0, 320, 240);
+  image(video, 0, 0, 400, 400);
   fill(255);
   textSize(16);
   text(label, 10, height - 10);
