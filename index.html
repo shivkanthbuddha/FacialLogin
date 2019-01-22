@@ -19,31 +19,30 @@
 			<h1>
 				<u>Facial Login</u>
 			</h1>
-			<br/>
-			<br/>
+			<br />
+			<br />
 		</div>
 
 		<!-- Login Form -->
 		<form>
-			<div> Provide your Name </div>
-			<input type="text" id="personName" name="personName" />
-			<!-- <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
-	  <input type="text" id="password" class="fadeIn third" name="login" placeholder="password"> -->
-			<div id="sketch-holder" style="width: 400px;height: 400px;">
-				<!-- Our sketch will go here! -->
-			</div>
+			<span id="nameSection">
+				<div> Provide your Name </div>
+				<input type="text" id="personName" name="personName" />
+			</span>
+			<div id="sketch-holder" class="fadeIn fourth" style="width: 400px;height: 400px;"> </div>
+			<div id="msg"> Please add multiple images for better accuracy</div>
+			<span id="buttons">
+				<input type="button" id="addAnImage" class="fadeIn fourth" value="Add an Image">
 
-			<div> Please add multiple images for better accuracy</div>
-			<input type="button" id="addAnImage" class="fadeIn fourth" value="Add an Image">
+				<input type="button" id="register" class="fadeIn fourth" value="Register a face">
 
-			<input type="button" id="register" class="fadeIn fourth" value="Register a face">
-
-			<input type="button" id="save" class="fadeIn fourth" value="Download model's delta">
+				<input type="button" id="save" class="fadeIn fourth" value="Download model's delta">
+			</span>
 		</form>
 
 		<!-- Remind Passowrd -->
 		<div id="formFooter">
-			<a class="underlineHover" href="#">Go to the Site</a>
+			<a class="underlineHover" href="javascript:login()">Login</a>
 		</div>
 
 	</div>
