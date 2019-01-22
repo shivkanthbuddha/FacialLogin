@@ -1,10 +1,3 @@
-// Daniel Shiffman
-// http://youtube.com/thecodingtrain
-// http://codingtra.in
-
-// Transfer Learning Feature Extractor Classification with ml5
-// https://youtu.be/eeO-rWYFuG0
-
 let mobilenet;
 let classifier;
 let video;
@@ -18,8 +11,6 @@ let labelInput;
 function modelReady() {
   console.log('Model is ready!!!');
   // classifier.load('model.json', customModelReady);
-  // classifier.load('model (1).json', customModelReady);
-  //  classifier.load('model (2).json', customModelReady);
 }
 
 function customModelReady() {
@@ -39,22 +30,19 @@ function setup() {
   background(0);
   mobilenet = ml5.featureExtractor('MobileNet', modelReady);
   classifier = mobilenet.classification(video, videoReady);
-  labelInput = select("#labelFormages");
+  labelInput = select("#personName");
 
-  happyButton = createButton('Add an Image ');
-  happyButton.mousePressed(function () {
+  addAnImage = select("#addAnImage"); 
+  addAnImage.mousePressed(function () {
     classifier.addImage( labelInput.value());
-    //classifier.addImage('happy');
   });
 
-
-
-  trainButton = createButton('Register the face ');
+  trainButton = select("#register");
   trainButton.mousePressed(function () {
     classifier.train(whileTraining);
   });
 
-  saveButton = createButton('Download model\'s delta');
+  saveButton = select("#save");
   saveButton.mousePressed(function () {
     classifier.save();
   });

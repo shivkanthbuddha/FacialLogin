@@ -16,21 +16,30 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <h1>Facial Login</h1>
+	  <h1><u>Facial Login</u></h1>
+	  <br/><br/>
     </div>
 
     <!-- Login Form -->
     <form>
-			<input type="text" id="labelFormages" name="labelForImages" />
+		<div> Provide your Name </div>	
+		<input type="text" id="personName" name="personName" />
       <!-- <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password"> -->
-      <input type="submit" class="fadeIn fourth" value="Log In">
+	  <input type="text" id="password" class="fadeIn third" name="login" placeholder="password"> -->
+	  <canvas></canvas>
+
+	  <div> Please add multiple images for better accuracy</div> 
+	  <input type="button" id="addAnImage" class="fadeIn fourth" value="Add an Image">
+	  
+	  <input type="button" id="register" class="fadeIn fourth" value="Register a face">
+
+	  <input type="button" id="save" class="fadeIn fourth" value="Download model's delta">
     </form>
 
     <!-- Remind Passowrd -->
-    <!-- <div id="formFooter">
+    <div id="formFooter">
       <a class="underlineHover" href="#">Go to the Site</a>
-    </div> -->
+    </div>
 
   </div>
 </div>
