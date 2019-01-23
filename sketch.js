@@ -7,12 +7,13 @@ let whistleButton;
 let trainButton;
 let personName;
 let msg;
+let count =0;
 
 
 function modelReady() {
   console.log('Model is ready!!!');
   // classifier.load('model.json', customModelReady);
-  msg.html( 'I am Ready with Mobilenet');
+  msg.html( "Hi There, provide your name and , Click on 'Add Image' 4  New Registration");
 }
 
 function customModelReady() {
@@ -39,12 +40,15 @@ function setup() {
 
   addAnImage = select("#addAnImage"); 
   addAnImage.mousePressed(function () {
+    count = count +1
+    msg.html( "Added (" + count +  ") Image to train , Atleast 10 photos. \n Click on 'Register a face' ")
     classifier.addImage( personName.value());
   });
 
   trainButton = select("#register");
   trainButton.mousePressed(function () {
     classifier.train(whileTraining);
+    count=0;
   });
 
   saveButton = select("#save");
@@ -73,7 +77,7 @@ function draw() {
 
 function whileTraining(loss) {
   if (loss == null) {
-    msg.html( "Registration Complete")
+    msg.html( "Registration Complete, Click on 'Login' to see how good i am ")
     console.log('Training Complete');
     //classifier.classify(gotResults);
   } else {
@@ -82,13 +86,11 @@ function whileTraining(loss) {
   }
 }
 
-
-
 function gotResults(error, result) {
   if (error) {
     console.error(error);
   } else {
-    msg.html( "Hi " + result.toUpperCase() + " Welcome back ");
+    msg.html( "Got you , " + result.toUpperCase() + "... Login successful");
     label = result;
     classifier.classify(gotResults);
   }
