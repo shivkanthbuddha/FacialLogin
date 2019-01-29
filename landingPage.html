@@ -27,55 +27,156 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 <style type="text/css">
+body {
+  
+}
+.center-on-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+h1 {
+  text-align: center;
+}
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #7FC4FD;
+  background-image: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: block;
+  height: 3em;
+  line-height: 3;
+  background: #7FC4FD;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: #34495e;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+.select::after {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+@font-face {
+    font-family: "futura medium bt";
+    font-weight: normal;
+    font-style: normal;  
+    src: url('fonts/iconic/fonts/futura medium bt.ttf');
+}
+
+@font-face {
+    font-family: "arial";
+    font-weight: normal;
+    font-style: normal;  
+    src: url('fonts/iconic/fonts/ARIBL0.ttf');
+}
+
+
+
+.fontClass {
+font-family: "futura medium bt";
+padding: 19px 0px 5px 10px;
+font-size: 32px;
+color: #3CB6D2;
+}
+
+.paraClass {
+font-size:14px;
+font-family: arial;
+color: #3CB6D2;
+}
 
 </style>
-
-<link rel="stylesheet" href="./style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
-<script src="https://unpkg.com/ml5@0.1.3/dist/ml5.min.js"></script>
 
 </head>
 <body>
 	
-
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="wrap-login100" style="width:479px">
-				<!-- <form class="login100-form validate-form"> -->
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title">
+						<!-- Welcome -->
+						<img src="images/icons/Nova-LogoVersion1-128x128.png">
+					</span>
 					
-					<!-- <h1 style="font-size:32px;color: #3CB6D2;font-family:futura;font-weight:bold;">Get a Quote</h1> -->
+					<h2 class="fontClass">What is Nova 2.0</h2>
+					<p class="paraClass">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum</p>
+                    
+					<!-- <div style="padding: 1.375rem 0px 2.375rem 1.75rem;"> -->
+					<!-- <select class="browser-default custom-select"> -->
 					
-					<!-- <div id="input_container"> -->
-						<!-- <input type="text" id="input" value> -->
-						<!-- <img src="images/icons/TakeSelfie64x50@2x.png" id="input_img"> -->
+					  <!-- <option selected>Policy Management</option> -->
+					  
+					<!-- </select> -->
+					<!-- <div style="padding: 1.375rem 0px 2.375rem 1.75rem;"> -->
+					<!-- <select class="browser-default custom-select"> -->
+					
+					  <!-- <option selected>Report a Claim</option> -->
+					 
+					<!-- </select></div> -->
+					
 					<!-- </div> -->
 					
 					
-				<!-- </form> -->
-				
-				<form method="post">
-				<div><a href="landingPage.html"><img src="images/icons/back-arrow16x16.png"></a></div>
-							<h1 class="fontClass text-capitalize">Facial Login</h1>
-							<!-- <p class="hint-text">Sign in with your social media account</p> -->
-							<div class="form-group" id="nameSection">
-								<input type="text" class="form-control" placeholder="Name" id="personName" name="personName"  required="required">
-							</div>
-							<div id="sketch-holder" class="fadeIn fourth" style="width: 400px;height: 400px;"> </div>
-							<div  class="customClass"style="text-align:center;color: #3CB6D2;font-weight: bold;font-size: 14px;" id="msg"> <b > Please add multiple images for better accuracy</div>
-								<hr/>
-								<span id="buttons">
-							<input type="button" id="addAnImage" value="Add an Image">
-	
-							<input type="button"  id="register"  value="Register a face">
-			
-							<input type="button"   id="save" value="Download model's delta">
-							</span>
-						</form>
-
-						<div id="formFooter">
-							<a class="underlineHover" href="javascript:login()">Login</a>
+					  <div class="select paraClass" style="font-weight: bold;">
+						<!-- <select name="slct" id="slct">
+						  <option>Policy Management</option>
+						  <option>Get A Quote</option>
+						</select> -->
+						
+						<select name="slct" id="slct" accesskey="S" onchange="goToPage(this.options(this.selectedIndex).value)">
+						 <option selected>Policy Management</option>
+						 <option value="getQuote">Get A Quote</option>
+						 </select>
 						</div>
+						
+						<div class="select paraClass" style="margin-top: 10px;font-weight: bold;">
+						<select name="slct" id="slct">
+						  <option>Report a Claim</option>
+						  <option>XXX</option>
+						</select>
+					  </div>
+  
+					
+					
+				</form>
 			</div>
 		</div>
 	</div>
@@ -99,7 +200,6 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-	<script src="sketch.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>NOAH - 2.0 </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/Nova-LogoVersion1.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<style type="text/css">
+body {
+  
+}
+.center-on-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+h1 {
+  text-align: center;
+}
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #3CB6D2;
+  background-image: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: block;
+  height: 3em;
+  line-height: 3;
+  background: #3CB6D2;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: #34495e;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+.select::after {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+#input_container { 
+    position:relative;
+    padding:0;
+    margin:0;
+}
+#input { 
+    height:20px;
+    margin:0;
+    padding-left:30px;
+}
+#input_img {
+    //position:absolute;
+    bottom:8px;
+    margin: -31px 4px -39px 3px;
+	//left:10px;
+    //width:10px;
+    //height:10px;
+}
+
+// form control styles here
+
+.form-control {
+		box-shadow: none;		
+		font-weight: normal;
+		font-size: 13px;
+	}
+	.form-control:focus {
+		border-color: #33cabb;
+		box-shadow: 0 0 8px rgba(0,0,0,0.1);
+	}
+	.navbar-header.col {
+		padding: 0 !important;
+	}	
+	.navbar {
+		background: #fff;
+		padding-left: 16px;
+		padding-right: 16px;
+		border-bottom: 1px solid #dfe3e8;
+		border-radius: 0;
+	}
+	.nav-link img {
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		margin: -8px 0;
+		float: left;
+		margin-right: 10px;
+	}
+	.navbar .navbar-brand, .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+		padding-left: 0;
+		font-size: 20px;
+		padding-right: 50px;
+	}
+	.navbar .navbar-brand b {
+		font-weight: bold;
+		color: #33cabb;		
+	}
+	.navbar .form-inline {
+        display: inline-block;
+    }
+	.navbar .nav li {
+		position: relative;
+	}
+	.navbar .nav li a {
+		color: #888;
+	}
+	.search-box {
+        position: relative;
+    }	
+    .search-box input {
+        padding-right: 35px;
+		border-color: #dfe3e8;
+        border-radius: 4px !important;
+		box-shadow: none
+    }
+	.search-box .input-group-addon {
+        min-width: 35px;
+        border: none;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        z-index: 9;
+        padding: 7px;
+		height: 100%;
+    }
+    .search-box i {
+        color: #a0a5b1;
+		font-size: 19px;
+    }
+	.navbar .nav .btn-primary, .navbar .nav .btn-primary:active {
+		color: #fff;
+		background: #33cabb;
+		padding-top: 8px;
+		padding-bottom: 6px;
+		vertical-align: middle;
+		border: none;
+	}	
+	.navbar .nav .btn-primary:hover, .navbar .nav .btn-primary:focus {		
+		color: #fff;
+		outline: none;
+		background: #31bfb1;
+	}
+	.navbar .navbar-right li:first-child a {
+		padding-right: 30px;
+	}
+	.navbar .nav-item i {
+		font-size: 18px;
+	}
+	.navbar .dropdown-item i {
+		font-size: 16px;
+		min-width: 22px;
+	}
+	.navbar ul.nav li.active a, .navbar ul.nav li.open > a {
+		background: transparent !important;
+	}	
+	.navbar .nav .get-started-btn {
+		min-width: 120px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+	.navbar ul.nav li.open > a.get-started-btn {
+		color: #fff;
+		background: #31bfb1 !important;
+	}
+	.navbar .dropdown-menu {
+		border-radius: 1px;
+		border-color: #e5e5e5;
+		box-shadow: 0 2px 8px rgba(0,0,0,.05);
+	}
+	.navbar .nav .dropdown-menu li {
+		color: #999;
+		font-weight: normal;
+	}
+	.navbar .nav .dropdown-menu li a, .navbar .nav .dropdown-menu li a:hover, .navbar .nav .dropdown-menu li a:focus {
+		padding: 8px 20px;
+		line-height: normal;
+	}
+	.navbar .navbar-form {
+		border: none;
+	}
+	.navbar .dropdown-menu.form-wrapper {
+		width: 280px;
+		padding: 20px;
+		left: auto;
+		right: 0;
+        font-size: 14px;
+	}
+	.navbar .dropdown-menu.form-wrapper a {		
+		color: #33cabb;
+		padding: 0 !important;
+	}
+	.navbar .dropdown-menu.form-wrapper a:hover{
+		text-decoration: underline;
+	}
+	.navbar .form-wrapper .hint-text {
+		text-align: center;
+		margin-bottom: 15px;
+		font-size: 13px;
+	}
+	.navbar .form-wrapper .social-btn .btn, .navbar .form-wrapper .social-btn .btn:hover {
+		color: #fff;
+        margin: 0;
+		padding: 0 !important;
+		font-size: 13px;
+		border: none;
+		transition: all 0.4s;
+		text-align: center;
+		line-height: 34px;
+		width: 47%;
+		text-decoration: none;
+    }	
+	.navbar .social-btn .btn-primary {
+		background: #507cc0;
+	}
+	.navbar .social-btn .btn-primary:hover {
+		background: #4676bd;
+	}
+	.navbar .social-btn .btn-info {
+		background: #64ccf1;
+	}
+	.navbar .social-btn .btn-info:hover {
+		background: #4ec7ef;
+	}
+	.navbar .social-btn .btn i {
+		margin-right: 5px;
+		font-size: 16px;
+		position: relative;
+		top: 2px;
+	}
+	.navbar .form-wrapper .form-footer {
+		text-align: center;
+		padding-top: 10px;
+		font-size: 13px;
+	}
+	.navbar .form-wrapper .form-footer a:hover{
+		text-decoration: underline;
+	}
+	.navbar .form-wrapper .checkbox-inline input {
+		margin-top: 3px;
+	}
+	.or-seperator {
+        margin-top: 32px;
+		text-align: center;
+		border-top: 1px solid #e0e0e0;
+    }
+    .or-seperator b {
+		color: #666;
+        padding: 0 8px;
+		width: 30px;
+		height: 30px;
+		font-size: 13px;
+		text-align: center;
+		line-height: 26px;
+		background: #fff;
+		display: inline-block;
+		border: 1px solid #e0e0e0;
+		border-radius: 50%;
+		position: relative;
+		top: -15px;
+		z-index: 1;
+    }
+    .navbar .checkbox-inline {
+		font-size: 13px;
+	}
+	.navbar .navbar-right .dropdown-toggle::after {
+		display: none;
+	}
+	@media (min-width: 1200px){
+		.form-inline .input-group {
+			width: 300px;
+			margin-left: 30px;
+		}
+	}
+	@media (max-width: 768px){
+		.navbar .dropdown-menu.form-wrapper {
+			width: 100%;
+			padding: 10px 15px;
+			background: transparent;
+			border: none;
+		}
+		.navbar .form-inline {
+			display: block;
+		}
+		.navbar .input-group {
+			width: 100%;
+		}
+		.navbar .nav .btn-primary, .navbar .nav .btn-primary:active {
+			display: block;
+		}
+	}
+	// social icons alignment
+	
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+// image inside input field
+
+input[type=text] {
+  box-sizing: border-box;
+  padding-left: 10px;  
+  font-size: 40px;
+  width:85%;
+  height:55px;
+  border: 2px solid black;
+  background-color: floralwhite;
+  //background-image: url("https://cdn1.iconfinder.com/data/icons/DarkGlass_Reworked/128x128/actions/emoticon.png");
+  background-size: 50px 50px;
+  //background-repeat: no-repeat;
+  background-position: right;
+}
+
+@font-face {
+    font-family: "futura medium bt";
+    font-weight: normal;
+    font-style: normal;  
+    src: url('fonts/iconic/fonts/futura medium bt.ttf');
+}
+
+.fontClass {
+font-family: "futura medium bt";
+padding: 19px 0px 5px 10px;
+font-size: 32px;
+color: #3CB6D2;
+}
+
+@font-face {
+    font-family: "arial";
+    font-weight: normal;
+    font-style: normal;  
+    src: url('fonts/iconic/fonts/ARIBL0.ttf');
+}
+
+.customClass {
+font-family: "arial";
+}
+
+.form-control::-webkit-input-placeholder { color: #3CB6D2; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: #3CB6D2; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: #3CB6D2; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: #3CB6D2; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: #3CB6D2; }  /* Microsoft Edge */
+</style>
+
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<!-- <form class="login100-form validate-form"> -->
+					
+					<!-- <h1 style="font-size:32px;color: #3CB6D2;font-family:futura;font-weight:bold;">Get a Quote</h1> -->
+					
+					<!-- <div id="input_container"> -->
+						<!-- <input type="text" id="input" value> -->
+						<!-- <img src="images/icons/TakeSelfie64x50@2x.png" id="input_img"> -->
+					<!-- </div> -->
+					
+					
+				<!-- </form> -->
+				
+				<form method="post">
+				<div><a href="landingPage.html"><img src="images/icons/back-arrow16x16.png"></a></div>
+							<h1 class="fontClass text-capitalize">Get a Quote</h1>
+							<!-- <p class="hint-text">Sign in with your social media account</p> -->
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Full Name" required="required">
+							</div>
+							
+							<div class="or-seperator"><b style="color:#3CB6D2">or</b></div>
+							<div class="customClass" style="text-align:center;color: #3CB6D2;font-weight: bold;font-size: 14px;">Sign Up with </div>
+							<div class="form-group social-btn clearfix">
+								<!-- <a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a> -->
+								<!-- <a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a> -->
+								<ul style="line-height: 3.5;margin: 0px 0px 0px 50px;">
+									<li><a href="#" class="btn btn-default btn-lg"><img src="images/icons/facebook-32x32.png"></a></li>
+									<li><a href="#" class="btn btn-default btn-lg"><img src="images/icons/g+.png"></a></li>
+									<li><a href="#" class="btn btn-default btn-lg"><img src="images/icons/twitter-32x32.png"></a></li>
+								</ul>
+								
+								
+							</div> 
+							<hr/>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Take A Selfie" required="required"><img align="right" src="images/icons/TakeSelfie32x25.png" id="input_img">
+							</div>
+							<hr/>
+							<p class="customClass" style="color:#3CB6D2;font-size:10px;">
+							By registering to this service, you permit usage of your information to propose an insurance and investment solution tailored for you.
+							</p>
+							<div class="customClass" style="text-align:center;"><input type="checkbox" style="text-align:center;height: 29px;width: 20px;"><p style="margin: -33px 0px 2px 80px;color:#3CB6D2;">I Accept</p>
+							</div>
+							<input type="submit" style="color:#fff;background-color: #3CB6D2;" class="btn btn-block" value="NEXT">
+							
+						</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

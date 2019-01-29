@@ -60,8 +60,8 @@ function setup() {
 function login(){
   select("#buttons").hide();
   select("#nameSection").hide()
-  trainButton.hide();
-  saveButton.hide();
+  //trainButton.hide();
+  //saveButton.hide();
   classifier.classify(gotResults);
 }
 
@@ -95,3 +95,4 @@ function gotResults(error, result) {
     classifier.classify(gotResults);
   }
 }
+
