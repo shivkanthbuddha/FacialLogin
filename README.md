@@ -1,6 +1,8 @@
 # FacialLogin
 Ability to Register a face and recognize the face in future. All credits to https://thecodingtrain.com/ for the training and initial code base.Takes the mobileNet model and retrains with addtional images 
 
+[Click for a DEMO](https://shivkanthbuddha.github.io/FacialLogin/)
+
 # Features!
 
   - Ability to Register a Face
